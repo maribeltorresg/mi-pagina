@@ -1,0 +1,108 @@
+/*Inicio estilos hambruguesa */
+.nav-right {
+    float: right;
+}
+
+.burger {
+    position: absolute;
+    top: 25px;
+    right: 28px;
+    height: 2px;
+    width: 24px;
+    background: #d0d0d0;
+  }
+
+.burger::before, .burger::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 24px;
+  display: block;
+  background: #d0d0d0;
+}
+
+.burger::before {
+    top: -8px;
+}
+
+.burger::after {
+    top: 8px;
+}
+/* Fin estilos hamburguesa */
+nav {
+    background-color: #343a40;
+    color: #fff;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-left {
+    float: left;
+    padding: 12px;
+}
+
+.nav-left a {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.view-desktop {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.intro-text {
+    background-image: url('http://placehold.it/1920x400');
+    height: 400px;
+    margin: 50px 0 0;
+}
+
+.intro-text h1 {
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px;
+}
+
+.info-card {
+    border: 1px solid #ddd;
+    margin: 35px 0;
+}
+
+.description-card {
+    padding: 18px;
+}
+
+.description-card p {
+    margin-top: 16px; 
+}
+
+.content-btn {
+    border-top: 1px solid #ddd; 
+    background-color: #f7f7f7;
+    padding: 10px;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    height: 90px;
+    padding: 42px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .view-mobile {
+        display: none;
+    }
+}
