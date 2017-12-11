@@ -4,7 +4,22 @@
 body {
     font-family: 'Lato', sans-serif;
 }
+
+.view-desktop {
+    /*display: none;*/
+}
+
 /*Inicio estilos hambruguesa */
+/* mostrar */
+.enabled-menu {
+    height: 250px;
+}
+
+/* ocultar */
+.disabled-menu {
+    height: 0;
+}
+
 .nav-right {
     float: right;
 }
@@ -12,9 +27,9 @@ body {
 .burger-border {
     border: 1px solid #444;
     border-radius: 3px; 
+    cursor: pointer;
     height: 40px;
-    margin-top: -4px;
-    padding-top: 5px;
+    margin: 10px 15px 0 0;
     width: 50px;
 }
 
@@ -46,8 +61,9 @@ body {
 /* Fin estilos hamburguesa */
 nav {
     color: #fff;
+    height: 60px;
     position: fixed;
-    padding: 15px;
+    /* padding: 15px; */
     width: 100%;
 }
 
@@ -57,6 +73,7 @@ nav.background {
 
 .nav-left {
     float: left;
+    margin: 10px 0 0 15px;
 }
 
 .nav-left a {
@@ -66,12 +83,34 @@ nav.background {
     text-decoration: none;
 }
 
-.view-desktop {
-    display: none;
-}
-
 img {
     width: 100%;
+}
+
+#menu {
+    background-color: #212529;
+    list-style: none;
+    /*height: 100vh;*/
+    overflow: hidden;
+    transition: all .5s;
+    width: 100%;    
+}
+
+#menu li {
+    border-bottom: 1px solid #ddd;
+    margin: 15px;   
+    padding-bottom: 15px; 
+    text-transform: uppercase;
+}
+
+#menu li a {
+    color: #fff;
+    font-weight: 400px;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    color: #fed136;
 }
 
 .header-image {
@@ -92,6 +131,8 @@ img {
 
 .intro-text p {
     font-style: italic;
+    font-size: 28px;
+    margin: 15px;
 }
 
 .intro-text h1 {
@@ -137,10 +178,16 @@ button {
 
 .description-card {
     padding: 18px;
+    text-align: center;
 }
 
+.description-card h3 {
+    font-size: 30px;
+}
 .description-card p {
+    color: #aaa;
     margin-top: 16px; 
+    font-style: italic;
 }
 
 .content-btn {
@@ -161,6 +208,15 @@ footer {
         display: none;
     }
 
+    #menu {
+        background-color: transparent;
+        width: auto;
+    }
+
+    #menu li {
+        border: none;
+    }
+
     /* header, */
     
     /* .header-image {
@@ -168,27 +224,24 @@ footer {
     } */
 
     .intro-text {
-        padding-top: 14%;
+        padding-top: 12%;
     }
 
     .view-desktop {
         display: block;
         list-style: none;
+        height: 60px;
     }
 
-    .view-desktop li {
+    .view-desktop li { 
         display: inline-block;
-        text-transform: uppercase;
+        /* text-transform: uppercase;s */
     }
 
     .view-desktop li a {
         color: #fff;
-        font-weight: 400px;
         padding: 15px;
         text-decoration: none;
     }
 
-    .view-desktop li a:hover {
-        color: #fed136;
-    }
 }
